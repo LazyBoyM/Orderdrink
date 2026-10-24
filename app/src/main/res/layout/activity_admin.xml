@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thêm/Sửa Đồ Uống"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingBottom="12dp"
+                android:textColor="@android:color/black"/>
+
+            <EditText
+                android:id="@+id/etDrinkName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Tên đồ uống"
+                android:paddingStart="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="#F0F0F0"/>
+
+            <EditText
+                android:id="@+id/etDrinkPrice"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Giá (VD: 35000)"
+                android:inputType="number"
+                android:paddingStart="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="#F0F0F0"/>
+
+            <EditText
+                android:id="@+id/etDrinkDescription"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:hint="Mô tả"
+                android:paddingStart="12dp"
+                android:gravity="top"
+                android:layout_marginBottom="8dp"
+                android:background="#F0F0F0"/>
+
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#F0F0F0"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- ✅ SPINNER DRAWABLE (MỚI) -->
+            <Spinner
+                android:id="@+id/spinnerDrawable"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#F0F0F0"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- 3 NÚT HÀNH ĐỘNG -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <Button
+                    android:id="@+id/btnAddDrink"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="➕"
+                    android:textStyle="bold"
+                    android:backgroundTint="#4CAF50"
+                    android:layout_marginEnd="4dp"/>
+
+                <Button
+                    android:id="@+id/btnUpdateDrink"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="✏️"
+                    android:textStyle="bold"
+                    android:backgroundTint="#2196F3"
+                    android:layout_marginHorizontal="4dp"/>
+
+                <Button
+                    android:id="@+id/btnDeleteDrink"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="🗑️"
+                    android:textStyle="bold"
+                    android:backgroundTint="#F44336"
+                    android:layout_marginStart="4dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginVertical="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📋 Danh Sách Đồ Uống"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingVertical="8dp"
+                android:textColor="@android:color/black"/>
+
+            <ListView
+                android:id="@+id/listViewAdminDrinks"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="1dp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

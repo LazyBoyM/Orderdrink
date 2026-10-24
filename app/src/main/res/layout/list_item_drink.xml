@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical">
+
+    <!-- ✅ IMAGEVIEW - HIỂN THỊ ẢNH -->
+    <ImageView
+        android:id="@+id/ivDrinkIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_drink_default"
+        android:contentDescription="Drink image"/>
+
+    <!-- TEXT SECTION -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="12dp">
+
+        <!-- TÊN SẢN PHẨM -->
+        <TextView
+            android:id="@+id/tvDrinkName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên đồ uống"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <!-- MÔ TẢ -->
+        <TextView
+            android:id="@+id/tvDrinkDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mô tả ngắn"
+            android:textSize="13sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="4dp"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <!-- GIÁ -->
+        <TextView
+            android:id="@+id/tvDrinkPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="35,000 đ"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_marginTop="6dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

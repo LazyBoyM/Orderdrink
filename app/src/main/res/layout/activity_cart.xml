@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ListView
+        android:id="@+id/listViewCart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"/>
+
+    <!-- ← NEW: PHONE + ADDRESS FIELDS -->
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="📱 Số điện thoại"
+        android:inputType="phone"
+        android:paddingStart="12dp"
+        android:layout_marginTop="8dp"
+        android:background="#F0F0F0"/>
+
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="📍 Địa chỉ giao hàng"
+        android:gravity="top"
+        android:paddingStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#F0F0F0"/>
+
+    <!-- PHẦN KHUYẾN MÃI -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="#F5F5F5"
+        android:layout_marginVertical="8dp">
+
+        <EditText
+            android:id="@+id/etPromoCode"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="Nhập mã khuyến mãi"
+            android:paddingStart="12dp"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btnApplyPromo"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Áp dụng"
+            android:textSize="12sp"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btnShowPromotions"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="🎁 Khuyến Mãi"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <!-- THANH TÓM TẮT TRỊ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#9C27B0">
+
+        <TextView
+            android:id="@+id/tvSubtotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tạm tính: 0 đ"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:paddingBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Giảm giá: 0 đ"
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_orange_light"
+            android:paddingBottom="8dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/white"
+            android:layout_marginVertical="8dp"/>
+
+        <TextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tổng tiền: 0 đ"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:paddingBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnContinue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tiếp Tục Mua"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnCheckout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Thanh Toán"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#4CAF50"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

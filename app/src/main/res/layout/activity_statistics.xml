@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📊 Thống Kê Bán Hàng"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:paddingBottom="24dp"/>
+
+    <!-- Doanh Thu -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bg_stat_revenue"
+        android:gravity="center"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/tvRevenue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💰 Tổng Doanh Thu: 0 đ"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <!-- Đơn Hàng -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bg_stat_order"
+        android:gravity="center"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/tvTotalOrders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📦 Tổng Đơn Hàng: 0 đơn"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <!-- Người Dùng -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bg_stat_user"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvTotalUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👥 Tổng Người Dùng: 0 người"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

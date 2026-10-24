@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shop Wua tờ"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="32dp"/>
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Tên đầy đủ"
+        android:paddingStart="16dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="16dp"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Mật khẩu"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Số điện thoại"
+        android:inputType="phone"
+        android:paddingStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Đăng Nhập"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tvToggleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chưa có tài khoản? Đăng ký"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingVertical="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnToggleForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chuyển sang Đăng Ký"
+        android:visibility="gone"/>
+
+</LinearLayout>

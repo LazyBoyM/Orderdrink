@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_menu"
+            android:icon="@drawable/ic_menu_drink"
+            android:title="Menu đồ uống"/>
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_order"
+            android:title="Đơn hàng"/>
+        <item
+            android:id="@+id/nav_promotions"
+            android:icon="@drawable/ic_promotion"
+            android:title="Khuyến mãi"/>
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="Hồ sơ"/>
+        <item
+            android:id="@+id/nav_statistics"
+            android:icon="@drawable/ic_stats"
+            android:title="Thống kê"/>
+    </group>
+
+    <item android:title="Quản lý">
+        <menu>
+            <item
+                android:id="@+id/nav_admin"
+                android:icon="@drawable/ic_admin"
+                android:title="Quản lý đồ uống"/>
+            <item
+                android:id="@+id/nav_admin_promo"
+                android:icon="@drawable/ic_admin"
+                android:title="Quản lý khuyến mãi"/>
+            <item
+                android:id="@+id/nav_users"
+                android:icon="@drawable/ic_admin"
+                android:title="Quản lý người dùng"/>
+        </menu>
+    </item>
+
+    <group android:id="@+id/group_logout">
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Đăng Xuất" />
+    </group>
+
+</menu>

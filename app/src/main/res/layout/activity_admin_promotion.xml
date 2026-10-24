@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- PHẦN FORM CÓ THỂ CUỘN LÊN XUỐNG -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thêm/Sửa Khuyến Mãi"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingBottom="12dp"
+                android:textColor="@android:color/black"/>
+
+            <EditText
+                android:id="@+id/etPromoCode"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Mã khuyến mãi (VD: WELCOME20)"
+                android:paddingStart="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="#F0F0F0"/>
+
+            <EditText
+                android:id="@+id/etPromoDescription"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:hint="Mô tả khuyến mãi"
+                android:paddingStart="12dp"
+                android:gravity="top"
+                android:layout_marginBottom="8dp"
+                android:background="#F0F0F0"/>
+
+            <EditText
+                android:id="@+id/etPromoDiscount"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="% Giảm giá (0-100)"
+                android:inputType="number"
+                android:paddingStart="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="#F0F0F0"/>
+
+            <EditText
+                android:id="@+id/etPromoStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Ngày bắt đầu (YYYY-MM-DD)"
+                android:paddingStart="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="#F0F0F0"/>
+
+            <EditText
+                android:id="@+id/etPromoEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Ngày kết thúc (YYYY-MM-DD)"
+                android:paddingStart="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="#F0F0F0"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kích hoạt: "
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <Switch
+                    android:id="@+id/switchPromoActive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_marginStart="12dp"/>
+
+            </LinearLayout>
+
+            <!-- 3 NÚT HÀNH ĐỘNG -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <Button
+                    android:id="@+id/btnAddPromo"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="➕"
+                    android:textStyle="bold"
+                    android:backgroundTint="#4CAF50"
+                    android:layout_marginEnd="4dp"/>
+
+                <Button
+                    android:id="@+id/btnUpdatePromo"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="✏️"
+                    android:textStyle="bold"
+                    android:backgroundTint="#2196F3"
+                    android:layout_marginHorizontal="4dp"/>
+
+                <Button
+                    android:id="@+id/btnDeletePromo"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="🗑️"
+                    android:textStyle="bold"
+                    android:backgroundTint="#F44336"
+                    android:layout_marginStart="4dp"/>
+
+            </LinearLayout>
+
+            <!-- ĐƯỜNG PHÂN CHIA -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginVertical="12dp"/>
+
+            <!-- PHẦN DANH SÁCH KHUYẾN MÃI -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📋 Danh Sách Khuyến Mãi"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingVertical="8dp"
+                android:textColor="@android:color/black"/>
+
+            <ListView
+                android:id="@+id/listViewAdminPromos"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="1dp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
